@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)file:///Users/ramprasanthalagar/Documents/resume_editable.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramprasanth Alagar – Resume</title>
+
+  <style>
+
+    /* ============================================================
+       HOW TO USE
+       ============================================================
+       1. Edit content directly in the HTML sections below
+       2. Open in Chrome → File → Print → Save as PDF
+          (set margins to "None" or "Minimum" for best result)
+       3. Change colours by editing the variables in :root below
+       ============================================================ */
+
+
+    /* ── COLOUR VARIABLES – change these to retheme everything ── */
+    :root {
+      --navy:      #1B3B6F;   /* header background, section titles  */
+      --teal:      #0D9488;   /* accent lines, bullet dots, metrics */
+      --dark:      #111827;   /* job titles                         */
+      --body:      #374151;   /* paragraph text                     */
+      --muted:     #9CA3AF;   /* dates, secondary text              */
+      --lgray:     #6B7280;   /* company names                      */
+      --ebg:       #E5E7EB;   /* tag backgrounds                    */
+      --pill-blue: #1D4ED8;   /* language pill background           */
+      --header-sub:#93C5D4;   /* header subtitle colour             */
+      --header-con:#7BAFC4;   /* header contact colour              */
+      --page-bg:   #ffffff;
+    }
+
+
+    /* ── RESET & BASE ─────────────────────────────────────────── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #e5e7eb;         /* grey outside the page         */
+      display: flex;
+      justify-content: center;
+      padding: 2rem 0 4rem;
+    }
+
+
+    /* ── PAGE (A4 size) ───────────────────────────────────────── */
+    .page {
+      background: var(--page-bg);
+      width: 794px;              /* A4 at 96dpi                     */
+      min-height: 1123px;
+      padding: 0 0 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+
+
+    /* ══════════════════════════════════════════════════════════════
+       HEADER  –  edit name, title, contact, languages here
+    ══════════════════════════════════════════════════════════════ */
+    header {
+      background: var(--navy);
+      padding: 28px 44px 22px;
+      position: relative;
+      border-left: 5px solid var(--teal);
+      border-bottom: 3px solid var(--teal);
+    }
+
+    header .name {
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+    }
+
+    header .title {
+      font-size: 12.5px;
+      color: var(--header-sub);
+      margin-top: 4px;
+    }
+
+    header .contact {
+      font-size: 9.5px;
+      color: var(--header-con);
+      margin-top: 8px;
+    }
+
+    /* Language pill — add/remove languages inside the span */
+    header .lang-pill {
+      display: inline-block;
+      background: var(--pill-blue);
+      color: #ffffff;
+      font-size: 8.5px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 999px;
+      margin-top: 10px;
+      letter-spacing: 0.03em;
+    }
+
+
+    /* ── BODY WRAPPER ─────────────────────────────────────────── */
+    .body {
+      padding: 16px 44px 0;
+    }
+
+
+    /* ══════════════════════════════════════════════════════════════
+       SECTION TITLES
+       To add a new section: copy any <section> block below,
+       change the <h2> text and add your content inside
+    ══════════════════════════════════════════════════════════════ */
+    section { margin-bottom: 13px; }
+
+    h2 {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding-bottom: 3px;
+      border-bottom: 1.3px solid var(--teal);
+      margin-bottom: 10px;
+    }
+
+
+    /* ── SUMMARY ──────────────────────────────────────────────── */
+    .summary {
+      font-size: 8.5px;
+      color: var(--body);
+      line-height: 1.65;
+    }
+
+
+    /* ══════════════════════════════════════════════════════════════
+       JOB ENTRIES
+       To add a job: copy one <div class="job"> block,
+       edit .job-title, .job-company, .job-date, and the <li> bullets
+       To remove a job: delete the entire <div class="job"> block
+    ══════════════════════════════════════════════════════════════ */
+    .job { margin-bottom: 10px; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .job-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    /* The "advisory" tag — remove the <span class="tag"> if not needed */
+    .tag {
+      font-size: 7.5px;
+      color: var(--muted);
+      background: var(--ebg);
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .job-date {
+      font-size: 8.5px;
+      color: var(--muted);
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+
+    .job-company {
+      font-size: 8.5px;
+      color: var(--lgray);
+      margin: 3px 0 6px;
+    }
+
+
+    /* ── BULLET POINTS ────────────────────────────────────────── */
+    ul { list-style: none; padding: 0; }
+
+    ul li {
+      font-size: 8.5px;
+      color: var(--body);
+      line-height: 1.6;
+      padding-left: 12px;
+      margin-bottom: 3.5px;
+      position: relative;
+    }
+
+    /* Teal dot bullet */
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 5px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    /* Metric highlight — wrap any key number in <strong> */
+    strong {
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+
+    /* ══════════════════════════════════════════════════════════════
+       TWO-COLUMN BOTTOM  (Education + Certs on left, Skills right)
+       To change the split: edit the grid-template-columns value
+    ══════════════════════════════════════════════════════════════ */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 24px;
+      margin-top: 4px;
+    }
+
+    /* Education items */
+    .edu-item { margin-bottom: 10px; }
+    .edu-school { font-size: 8.5px; font-weight: 700; color: var(--dark); }
+    .edu-degree { font-size: 8px; color: var(--lgray); margin-top: 2px; }
+
+    /* Certification items */
+    .cert-item { margin-bottom: 10px; }
+    .cert-name   { font-size: 8px; font-weight: 700; color: var(--dark); }
+    .cert-issuer { font-size: 8px; color: var(--lgray); margin-top: 1px; }
+
+    /* Skill rows — label on left, value on right */
+    .skill-row {
+      display: flex;
+      gap: 8px;
+      font-size: 8px;
+      margin-bottom: 9px;
+      align-items: baseline;
+    }
+    .skill-label {
+      font-size: 7.5px;
+      font-weight: 700;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      min-width: 60px;
+      flex-shrink: 0;
+    }
+    .skill-val { color: var(--body); line-height: 1.5; }
+
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    .footer {
+      margin: 18px 44px 0;
+      border-top: 0.5px solid var(--ebg);
+      padding-top: 8px;
+      text-align: center;
+      font-size: 7.5px;
+      color: var(--muted);
+    }
+
+
+    /* ══════════════════════════════════════════════════════════════
+       PRINT STYLES  (what the PDF actually looks like)
+       DO NOT edit unless you know what you're doing
+    ══════════════════════════════════════════════════════════════ */
+    @media print {
+      body     { background: none; padding: 0; }
+      .page    { box-shadow: none; width: 100%; min-height: auto; }
+      @page    { size: A4; margin: 0; }
+    }
+
+  </style>
+</head>
+<body>
+<div class="page">
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER  —  edit name / title / contact / languages below
+  ══════════════════════════════════════════════════════════ -->
+  <header>
+    <div class="name">Ramprasanth Alagar (Raam)</div>
+    <div class="title">Berlin, Germany</div>
+    <div class="contact">ramprasanth30@gmail.com</div>
+    <div class="lang-pill">Tamil  ·  English  ·  French  ·  German</div>
+  </header>
+
+
+  <div class="body">
+
+    <!-- ══════════════════════════════════════════════════════════
+         SUMMARY  —  edit the paragraph text below
+    ══════════════════════════════════════════════════════════ -->
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">
+        CRM and lifecycle marketing professional with +9 years in digital marketing, including 8 in CRM and lifecycle. 
+        At SumUp, own lifecycle strategy and automation across a broad product portfolio: Card Reader, Tap to Pay, Kiosks, 
+        Onboarding, Online Store, Invoices, Payment Link, Bookings, Payment Plus (subscription) and webshop abandoned-cart recovery. 
+        Skilled in data-led journey design, segmentation and controlled testing with Salesforce Marketing Cloud (SFMC), 
+        Iterable, Snowflake and Mixpanel. A calm, solution-oriented partner to Product, Sales and Business Development in high-pressure launches.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════
+         EXPERIENCE
+
+         HOW TO EDIT:
+         • Add a bullet:   add a new <li> inside the <ul>
+         • Remove a bullet: delete the <li> line
+         • Add a job:       copy one full <div class="job"> block
+         • Remove a job:    delete the full <div class="job"> block
+         • Wrap any number/metric in <strong> to highlight it teal
+         • Remove the <span class="tag">advisory</span> if not needed
+    ══════════════════════════════════════════════════════════ -->
+    <section>
+      <h2>Experience</h2>
+
+
+      <!-- JOB 1: SumUp -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">CRM Manager</div>
+          <div class="job-date">Dec 2021 – Present</div>
+        </div>
+        <div class="job-company">SumUp – Payment Solutions &amp; Business Tools · Berlin, Germany</div>
+        <ul>
+          <li>Identified cart abandonment as a high-leverage revenue gap and led the strategy to address it by redesigning the recovery experience and 
+            introducing basket-level promotions. More than doubled the recovery rate from 4.2% to 9%, recovering approximately 1,400 additional orders per quarter.
+          </li>
+          <li>Built the business case for, and led, the shift from campaign-by-campaign execution to a structured feature-adoption programme across Online Store, 
+            Invoices, Bookings, Kiosks, POS Lite and Payment Link. Established a loop feeding merchant feedback into the product roadmap and achieved a 
+            1.6 percentage point higher adoption rate than the control group.
+          </li>
+          <li>Designed an early-lifecycle CRM strategy using segmentation, personalisation and automated journeys, driving 23% month-on-month growth in 
+            activations within 3 months of launch. Fixed data latency and audience-logic mismatches in SQL and added touchpoints and channels to keep new 
+            merchants engaged.
+          </li>
+          <li>Owned the go-to-market communications for a new business unit launch. Used soft-launch data to sequence audiences in waves, 
+            starting with the segments most likely to adopt, and to confirm channel readiness before full rollout. De-risked a launch reaching 
+            1M+ users and delivered a 1.2% signup rate with an unsubscribe rate below 0.01% across the full launch.
+          </li>
+          <li>Identified the SFMC-to-Iterable migration as a resource bottleneck and built AI agents in Langdock to automate it, 
+            cutting template migration (AMPscript to Handlebars) from about 30 minutes to under 5 minutes per template and freeing the team for strategic work.
+          </li>
+          <li>Led quarterly project prioritisation and capacity planning with stakeholders to keep projects on track.
+          </li>
+        </ul>
+      </div>
+      
+      <!-- JOB 2: Ram Investments -->
+      <!--<div class="job">
+        <div class="job-header">
+          <div class="job-title">CRM & Communications Advisor (Part-time, Remote)</div>
+          <div class="job-date">Jan 2026 – Present</div>
+        </div>
+        <div class="job-company">Ram Investments – Financial Planning & Wealth Advisory · Dindigul, India</div>
+        <ul>
+          <li>Translated complex investment products, including mutual funds, ETFs and equity portfolios, into clear, compliant client-facing communications.
+          </li>
+          <li>Designed onboarding journeys for high-value investment prospects using segmentation and entry conditions, achieving a 1.3% cold-to-active 
+            conversion rate with an unsubscribe rate below 1%.
+          </li>
+        </ul>
+      </div>-->
+
+      <!-- JOB 3: Bidroom -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Email Marketing Specialist</div>
+          <div class="job-date">Dec 2018 – Jul 2021</div>
+        </div>
+        <div class="job-company">Bidroom – Hotel Booking Platform · Krakow, Poland</div>
+        <ul>
+          <li>
+           Collaborated cross-functionally with Sales and Business Development to design automated, client-centric lead-nurturing journeys (warm and cold segments), 
+           optimising activation workflows and performance reporting.
+          </li>
+          <li>Achieved a 60% average registration rate among targeted hotel partners for global hospitality events (webinars, podcasts, networking sessions) 
+            through registration forms, landing pages and segmented invitations. Shared event content with hotels that had not registered and gathered their 
+            feedback on speakers and topics.
+          </li>
+          <li>Designed the onboarding journey for hotels after contract signature, guiding them through photos, 
+            pricing and key tips for setting up their listing, with a 99% completion rate.
+          </li>
+          <li>Advised on digital advertising and email campaign strategy, connecting attendees with exclusive perks that boosted engagement, 
+            loyalty and repeat participation. Coordinated cross-team operations to deliver projects on time.
+          </li>
+          <li>Designed and ran post-event survey strategy to collect attendee feedback and improve future events.
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- JOB 4: Consultancy (Self-Employed) -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Founder, Web Development & Digital Marketing</div>
+          <div class="job-date">Mar 2018 – Dec 2018</div>
+        </div>
+        <div class="job-company">Consultancy (Self-Employed)  · Paris, France</div>
+        <ul>
+          <li>Founded a digital marketing and web consultancy for small businesses, generating an average of €3,000 revenue per client plus a 
+            €350 monthly subscription (optional add-on) covering marketing materials and website support.
+          </li>
+          <li>Managed workflows with international web-development vendors to deliver client websites, and provided ongoing support for 
+            site downtime and page rendering issues.
+          </li>
+          <li>Partnered with the Learning Planet Institute Paris on marketing campaigns and sponsorship outreach.
+          </li>
+           <li>Advised clients on digital advertising, workshops and event campaigns using consumer research and data insights.
+          </li>
+        </ul>
+      </div>
+
+            <!-- JOB 5: BD Electronics -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Digital Marketing Assistant</div>
+          <div class="job-date">Jul 2017 – Jan 2018</div>
+        </div>
+        <div class="job-company">BD Electronics - Electronics Supplier · Malta</div>
+        <ul>
+          <li>Improved lead generation by 28% by replacing untargeted email sends with demand-based segmentation 
+            (repeat buyers, group buyers, seasonal and dormant buyers) and tailored messaging.
+          </li>
+          <li>Identified high-potential electronic components through market research and buyer behaviour analysis, 
+            supporting the sales team with faster, more relevant follow-ups.
+          </li>
+          <li>Trained sales and marketing teams on Google Analytics, strengthening cross-functional data awareness 
+            and enabling more data-driven campaign decisions.
+          </li>
+        </ul>
+      </div>
+
+            <!-- JOB 6: GTL Infrastructure -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Project Engineer</div>
+          <div class="job-date">Nov 2013 – Dec 2014</div>
+        </div>
+        <div class="job-company">GTL Infrastructure - Network Services Provider · Chennai, India</div>
+        <ul>
+          <li>Delivered telecom infrastructure projects by supervising on-site construction activities 
+            and ensuring all electronic equipment was delivered in the correct quantity and quality.
+          </li>
+          <li>Conducted feasibility analysis for new tenant installations and network upgrades, 
+            preparing detailed technical reports and recommending the most suitable tower sites for deployment.
+          </li>
+          <li>Coordinated with cross-functional teams and vendors to ensure project timelines, 
+            quality standards, and client requirements were consistently met.
+          </li>
+        </ul>
+      </div>
+
+    </section><!-- end experience -->
+
+
+    <!-- ══════════════════════════════════════════════════════════
+         BOTTOM TWO COLUMNS  —  Education + Certs (left), Skills (right)
+    ══════════════════════════════════════════════════════════ -->
+    <div class="two-col">
+
+      <!-- LEFT COLUMN -->
+      <div>
+
+        <!-- EDUCATION
+             Add a degree: copy one <div class="edu-item"> block
+             Remove a degree: delete the block -->
+        <section>
+          <h2>Education</h2>
+
+          <div class="edu-item">
+            <div class="edu-school">ESC Rennes School of Business</div>
+            <div class="edu-degree">MSc Global Business Management · 2015–2017 · France</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-school">Sathyabama University</div>
+            <div class="edu-degree">BE Mechanical Engineering · 2009–2013 · India</div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS
+             Add: copy one <div class="cert-item"> block
+             Remove: delete the block -->
+        <section>
+          <h2>CERTIFICATIONS & TRAINING</h2>
+
+          <div class="cert-item">
+            <div class="cert-name">Marketing Analytics</div>
+            <div class="cert-issuer">University of Virginia, 2025</div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-name">Data & Analytics</div>
+            <div class="cert-issuer">DataCamp (30+ courses in SQL, R, Python)</div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-name">Enterprise Design Thinking</div>
+            <div class="cert-issuer">IBM</div>
+          </div>
+        </section>
+
+      </div><!-- end left column -->
+
+
+      <!-- RIGHT COLUMN: SKILLS
+           Add a row:    copy one <div class="skill-row"> block
+           Remove a row: delete the block
+           Edit label:   change text inside <span class="skill-label">
+           Edit values:  change text inside <span class="skill-val"> -->
+      <div>
+        <section>
+          <h2>Skills</h2>
+
+          <div class="skill-row">
+            <span class="skill-label">Platforms & Languages:</span>
+            <span class="skill-val">Iterable, Salesforce Marketing Cloud (SFMC), CleverTap, Mailchimp, Amazon Pinpoint, 
+              Freshsales, AMPscript, HTML/CSS, Handlebars</span>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Analytics & Data:</span>
+            <span class="skill-val">SQL, Snowflake, MySQL, Google Analytics, Tableau, Mixpanel, Excel, 
+              Advanced Google Sheets (QUERY, pivot tables), R</span>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Lifecycle Strategy & Execution:</span>
+            <span class="skill-val"> Customer Segmentation, Personalisation, Customer Engagement, 
+              Campaign Design, Lifecycle Marketing, A/B Testing, Reporting & Dashboards, Stakeholder Management
+            </span>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">AI & Automation:</span>
+            <span class="skill-val"> Langdock (AI agent development), Prompt Engineering, AI-powered workflow automation, Claude, ChatGPT</span>
+          </div>
+
+          <div class="skill-row">
+            <span class="skill-label">Project & Collaboration Tools:</span>
+            <span class="skill-val"> Jira, Asana, Trello, Confluence, Miro, Notion, Figma</span>
+          </div>
+
+        </section>
+      </div><!-- end right column -->
+
+    </div><!-- end two-col -->
+
+
+    <!-- ── FOOTER ──────────────────────────────────────────────── -->
+    <div class="footer">
+      Ramprasanth Alagar · ramprasanth30@gmail.com · Berlin, Germany
+    </div>
+
+  </div><!-- end body -->
+</div><!-- end page -->
+
+
+</body></html>
